@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }#text {
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+            font-family: tahoma;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">.. جار التحميل</p>
+    <script>
+        let text = document.getElementById("text");
+        setTimeout(function () {
+            text.innerHTML = ".. جار تهكير الجهاز";
+            text.style.color = "red";
+            setTimeout(function () {
+                text.innerHTML = "• تم تهكير الجهاز";
+                text.style.color = "red";
+                setTimeout(function () {
+                    text.innerHTML = ".. جار نقل المعلومات";
+                    text.style.color = "red";
+                    setTimeout(function () {
+                        text.innerHTML = "• تم نقل المعلومات";
+                        text.style.color = "red";
+                        setTimeout(function () {
+                            window.close()
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 2000);
+    </script>
+</body>
+</html>
